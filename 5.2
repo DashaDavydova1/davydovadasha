@@ -1,0 +1,9 @@
+def is_anagram(a, b):
+    a = ''.join(c.lower() for c in a if c.isalpha())
+    b = ''.join(c.lower() for c in b if c.isalpha())
+    return sorted(a) == sorted(b)
+print(is_anagram("Listen", "Silent"))
+print(is_anagram("abc", "abd"))
+print(is_anagram("", ""))
+print(is_anagram("Dormitory", "Dirty Room"))
+print(is_anagram("a", ""))

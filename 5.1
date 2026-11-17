@@ -1,0 +1,8 @@
+def chunk_by_size(lst, size):
+    if size <= 0:
+        raise ValueError("Размер должен быть больше 0")
+    return [lst[i:i + size] for i in range(0, len(lst), size)]
+print(chunk_by_size([1, 2, 3, 4, 5], 2)) # [[1,2], [3,4], [5]]
+print(chunk_by_size([1, 2, 3], 3))       # [[1, 2, 3]]
+print(chunk_by_size([1, 2, 3], 5))       # [[1, 2, 3]]
+print(chunk_by_size([], 3))              # []
